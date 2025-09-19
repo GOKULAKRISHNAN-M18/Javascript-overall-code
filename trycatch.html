@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+       // Exception Handling
+
+
+            try {
+                let num = prompt('Enter a number it can square it')
+                if (num === '')
+                    throw 'not a number'
+
+                if (isNaN(num))
+                    throw "Enter a number not text"
+
+
+                console.log(num ** 2)
+            }
+            catch (error) {
+                console.log(error)
+            }
+            finally {
+                console.log("Visit again")
+            }
+        </script>
+
+    <!--------Using Function-------->
+    <script>
+        function myfunction(number_1, number_2) {
+            try {
+
+                if (number_1 === undefined || number_2 === undefined) {
+                    throw new Error('undefined bro')
+                }
+                else if (number_1<=-1 && number_2<=-1) {
+                    throw new Error('Enter a positive number')
+                }
+                else {
+                    let ouptput = number_1 + number_2;
+                    console.log("result : " + ouptput);
+                }
+            }
+            catch (error) {
+                console.log(error.message);
+            }
+            finally {
+                console.log("welcome")
+            }
+        }
+        myfunction(5, 5)
+
+    </script>
+</body>
+
+</html>

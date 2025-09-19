@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>To-Do List (Arrow Function)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+
+        input,
+        button {
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        ul {
+            margin-top: 20px;
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            padding: 8px;
+            border-bottom: 1px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>📝 To-Do List</h2>
+    <input type="text" id="taskInput" placeholder="Type a task..." />
+    <button id="addBtn">Add Task</button>
+
+    <ul id="taskList"></ul>
+
+    <!-- <script>
+        // Step 1: Get HTML elements
+        const taskinput = document.getElementById("taskInput")// Input box
+        const tasklist = document.getElementById("taskList")// List area
+        const btn = document.getElementById("addBtn")// Button
+
+        // Step 2: Arrow function to add task
+
+
+        const task = () => {
+            const taskbox = taskinput.value.trim();  // Remove extra spaces
+            if (taskbox === '') return; // If input is empty, stop
+
+            const list = document.createElement('li')// Create <li>
+            list.textContent = taskbox; // Put task text in it
+            tasklist.appendChild(list)// Add it to the list
+            taskbox.value = ''// Clear the input
+        };
+
+        // Step 3: When button is clicked, run addTask
+        // addBtn.addEventListener("click", () => addtask());
+        btn.addEventListener('click', () => task())
+
+        // Step 4: When Enter key is pressed, run addTask
+        // taskInput.addEventListener("keypress", (e) => {
+        //     if (e.key === "Enter") task();
+        // });
+        taskinput.addEventListener('keypress',(e)=> {
+          if(e.key ==='Enter') task();
+        });
+
+    </script> -->
+
+    <script>
+        //1.define the element by using getelementbyid
+
+        const taskinput = document.getElementById('taskInput') //input box
+
+
+        const tasklist = document.getElementById("taskList") //tasklist
+        const btn = document.getElementById("addBtn") //button
+
+        //2.Using arrow funtion 
+
+        const task = () => {
+            const taskbox = taskinput.value.trim(); //Erase the gap
+            if (taskbox === '') return; //not write anything return empty
+
+            const listi = document.createElement('li') //create a list 
+            listi.textContent = taskbox;//contant of the list
+            tasklist.appendChild(listi);//more number of content will store one to one
+            taskinput.value = '';
+
+        };
+
+        //3.add Button click
+        btn.addEventListener('click', () => task())
+
+        //4.user press enter 
+
+        taskinput.addEventListener('keypress',(e)=>{
+            if(e.key ==='Enter') task()
+        });
+
+    </script>
+
+</body>
+
+</html>

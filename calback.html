@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button id="subscribe">Subscribe</button>
+
+
+    <script>
+        const subscribe = document.getElementById('subscribe')
+
+        subscribe.addEventListener('click', () => {
+            console.log('perform')
+            alert("subscribe successfully")
+        });
+    </script>
+    <!-- <script>
+        function greetbye(myname) {
+            setTimeout(() => {
+                console.log('bye' + myname);
+            }, 3000)
+
+        }
+        function greetuser(name, Cb) {
+            const myname = name.toUpperCase()
+            console.log('My name is ' + myname)
+            Cb(myname)
+
+        }
+        greetuser('Gokul', greetbye,3000)
+
+    </script> -->
+
+    <!-- <script>
+        function doctor(miname) {
+            setTimeout(() => {
+                console.log('D : hi' + miname);
+
+            }, 3000)
+        }
+        function doctor1(miname) {
+            setTimeout(() => {
+                console.log('D : How can I help you');
+
+            }, 6000)
+        }
+
+        function greeting(name, Cb, Cb1) {
+            const miname = name.toUpperCase()
+            console.log('U: Hello ' + miname);
+            Cb(miname)
+            doctor1(miname)
+
+        }
+        greeting('Gokul', doctor, doctor1)
+    </script> -->
+
+    <!-- <script>
+        let newdata = new Promise((resolve, reject) => {
+            let newdata1 = false
+
+            if (newdata1) {
+                resolve("Data recived")
+            }
+            else {
+                reject('Data not recived')
+            }
+
+        })
+        newdata.then((message) => {
+            console.log("Success : " + message)
+        })
+        newdata.catch((error) => {
+            console.log("failiure : " + error)
+        })
+    </script>
+
+
+
+    <script>
+        const numbers = [1, 2, 3, 5, 6, 8]
+        numbers.forEach((num) => {
+            console.log('current item : ' + num / 2);
+
+        })
+    </script>
+
+    <script>
+        function f1(callback) {
+            setTimeout(() => {
+                console.log('Running first')
+                callback();
+            }, 3000)
+        }
+
+        function f2(callback) {
+            setTimeout(() => {
+                console.log('Running first')
+                callback();
+            }, 3000)
+        }
+
+        function f3() {
+            setTimeout(() => {
+                console.log('Running first')
+            }, 3000)
+        }
+       f1(() => f2(() => f3()));
+
+    </script> -->
+
+
+    <script>
+        function f1(callback) {
+            setTimeout(() => {
+                console.log('running')
+                callback();
+            }, 3000)
+        }
+        function f2(callback) {
+            setTimeout(() => {
+                console.log('running')
+                callback();
+            }, 3000)
+        }
+        function f3(callback) {
+            setTimeout(() => {
+                console.log('running')
+                callback();
+            }, 3000)
+        }
+        f1(() => f2(() => f3()))
+        // f2();
+        // f3();
+    </script>
+
+</body>
+
+</html>
